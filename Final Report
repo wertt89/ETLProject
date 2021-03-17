@@ -1,0 +1,32 @@
+
+
+Team members: Victoria Arriola, Konsta Jokipii, and Judith Samuels
+
+Project Description
+	
+Using data sets based on cryptocurrencies bitcoin and Ethereum we joined the data based on the date. Comparing the highs, lows, open, and close.
+
+Extraction
+
+Datasets were sourced from kaggle.com:
+
+Bitcoin dataset>>
+Ethereum dataset>>
+
+The data was in CSV format.
+
+Transformation:
+
+For the bitcoin dataset, we only converted the Unix Timestamp to datetime format and dropped all columns apart from those and Open, High, Low, Close. Then the dataset was grouped by datetime.
+
+For the Ethereum dataset, the Unix timestamp was in milliseconds so it needed to be shortened to seconds. After that, a conversion to datetime was made and only the same columns as with the Bitcoin dataset were kept. Dataset was grouped by datetime. 
+
+For both of the data sets, we had to transform the data by editing the column names in order to match the SQL tables.  
+
+Load:
+For loading the two datasets into SQL we first had to create the databases and tables. After creating those we had to create and connect the engines using a config.py file to hold the password for SQL. Lastly, after checking the engine tables in Jupyter we were able to access the data in SQL. 
+
+We also tried adding a third dataset of all Bitcoin related tweets but the filesize of 4.19Gb posed such significant challenges that we ended up excluding it from our final submission.
+
+Join:
+We joined the data files together and ran a query to prove that it worked
